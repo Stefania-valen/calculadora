@@ -13,11 +13,9 @@ def multiplicar(num1,num2):
     return resultado
 
 def division (num1,num2):
-    try:
         resultado = num1/num2
         return resultado
-    except ZeroDivisionError as e:
-        print("no se púede dividir entre 0"); 
+    
 
 while True:
     numero1 = int(input("Ingrese el primer numero: "));
@@ -25,10 +23,18 @@ while True:
     numero2 = int(input("Ingrese el segundo numero: "));
     if op == 1:
         print(sumar(numero1,numero2))
-        break
     if op == 2:
         print(restar(numero1,numero2))
-        break
     if op == 3:
         print(multiplicar(numero1,numero2))
+    if op == 4:
+        try:
+            print(division(numero1,numero2))
+        except ZeroDivisionError as e:
+            print("no se púede dividir entre 0");
+    menu = str(input("¿Desea continuar?(S/N)"))
+    if menu.upper() == "S":
+        continue
+    else:
         break
+print("Adios")
