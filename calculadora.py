@@ -10,6 +10,10 @@ def restar(num1,num2):
 def multilicar(num1,num2):
     resultado = num1*num2
     return resultado
+
 def division (num1,num2):
-    resultado = num1/num2
-    return resultado
+    try:
+        resultado = num1/num2
+        return resultado
+    except ZeroDivisionError as e:
+        print("no se púede dividir entre 0");
