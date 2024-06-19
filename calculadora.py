@@ -16,11 +16,12 @@ def division (num1,num2):
         resultado = num1/num2
         return resultado
     
-op = 0
-while op != 5:
+while True:
     try:
         numero1 = int(input("Ingrese el primer numero: "));
         op = int(input("Ingrese la accion que desea realizar \n 1. Sumar \n 2. Restar \n 3. Multiplicar \n 4. Dividir\n 5. Salir \n"));
+        if op<1 or op>4:
+            break
         numero2 = int(input("Ingrese el segundo numero: "));
         if op == 1:
             print(sumar(numero1,numero2))
@@ -38,6 +39,7 @@ while op != 5:
             continue
         else:
             break
+        
     except ValueError as a:
         print("Ingrese un valor correcto")
         continue
