@@ -8,7 +8,7 @@ def sumar(num1,num2):
 def restar(num1,num2):
     resultado = num1-num2
     return resultado
-def multilicar(num1,num2):
+def multiplicar(num1,num2):
     resultado = num1*num2
     return resultado
 
@@ -25,4 +25,10 @@ while True:
     numero2 = int(input("Ingrese el segundo numero: "));
     if op == 1:
         print(sumar(numero1,numero2))
+        break
+    if op == 2:
+        print(restar(numero1,numero2))
+        break
+    if op == 3:
+        print(multiplicar(numero1,numero2))
         break
